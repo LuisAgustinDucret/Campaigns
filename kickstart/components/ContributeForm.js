@@ -16,7 +16,6 @@ const ContributeForm = ({address}) => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-
     setLoadingButton(true);
     setErrorMesage("");
     
@@ -27,7 +26,7 @@ const ContributeForm = ({address}) => {
       await campaignSearch.methods.contribute().send({
         from: accounts[0],
         value: web3.utils.toWei(contribution, "ether"),
-      });
+      });  
 
       router.replace(`/campaigns/${address}`);
     } catch (err) {
@@ -38,7 +37,7 @@ const ContributeForm = ({address}) => {
     setLoadingButton(false);
   };
 
-  return (
+  return ( 
     <Container>
       <Form onSubmit={submitHandler} error={errMessage != ""}>
         <Form.Field>

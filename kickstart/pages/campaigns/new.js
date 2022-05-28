@@ -58,7 +58,7 @@ const CampaignNew = (props) => {
             header= "oops, error!"
             content= {errMessage}
           />
-          <Button loading={loadingButton} type="submit">Create!</Button>
+          <Button primary loading={loadingButton} type="submit">Create!</Button>
         </Form>
       </Container>
     </Layout>
