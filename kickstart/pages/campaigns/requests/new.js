@@ -3,7 +3,6 @@ import { Button, Form, Input, Message } from "semantic-ui-react";
 import Layout from "../../../components/Layout";
 import web3 from "../../../ethereum/web3";
 import Campaign from '../../../ethereum/campaign';
-import Router from '../../../routes';
 import { Link } from "../../../routes";
 
 
@@ -41,7 +40,6 @@ const RequestNew = ({ address }) => {
         .send({
           from: accounts[0],
         });
-      Router.pushRoute("/");
     } catch (err) {
       setErrorMesage(err.message);
     }
